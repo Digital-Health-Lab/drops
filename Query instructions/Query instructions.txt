@@ -1,0 +1,98 @@
+There are the instructions.
+
+Option one:
+
+1. Log in to the server through Putty. Please see section 3 in the handover document.
+
+2. Log in to the database. Please see section 7.3 in the handover document
+
+3. Run the query as below. Please see the attached screen shots for both results
+
+To find all the participants aged >40 across all studies
+
+db.participant.find({age:{$gt: 40}}).toArray()
+
+
+To find all the step count data of all ‘females’ aged >40 in all my studies
+
+db.step_count.aggregate([
+	{ $lookup:
+		{
+			from: "participant",
+			localField: "participantId",
+			foreignField: "participantId",
+			as: "participant"
+		}
+	},
+	{ $unwind: "$participant"
+	},
+	{ $lookup:
+		{
+			from: "study",
+			localField: "participant.studyId",
+			foreignField: "studyId",
+			as: "study"
+		}
+	},
+	{ $unwind: "$study"
+	},
+	{ $match: {"study.userId": 5, "participant.age": {$gt: 40}, "participant.gender": "F"}},
+	{ $project:
+		{
+			_id: 0,
+			"participant.age": 1,
+			"participant.gender": 1,
+			participantId : 1,
+			sourceId: 1,
+			measuredAt: 1,
+			steps: 1,
+			xAxis: 1,
+			yAxis: 1,
+			zAxis: 1,
+			variableName: 1,
+			variableValue: 1,
+			addData: 1,
+			createdAt: 1,
+			updatedAt: 1
+		}
+	}
+]).toArray()
+
+
+4. For more detailed tutorials about mongodb query please see:
+https://docs.mongodb.com/manual/tutorial/query-documents/
+https://docs.mongodb.com/manual/aggregation/
+
+
+Option two:
+
+I will generally use Excel and Access to link and query imported dataset.
+
+1. Download the dataset from website
+
+2. Open 3 .csv files in Excel and save them as 3 .xlsx files
+
+3. Create a blank database from Access and open it
+
+4. External Data -> New Data Source -> From File -> Excel, and browse the .xlsx files you just created, and then click OK
+
+5. Next -> Tick off 'First Row Contains Column Headings' and Next -> Next -> Next -> Finish
+
+6. Repeat above step 4 and 5 for the other two .xlsx files
+
+7. Now you will see 3 tables on the left menu (please ignore the default table named 'Table1')
+
+8. Database Tools -> Relationships -> add those 3 tables in
+
+9. Link Study and Participant tables by studyId, and link Participant and Step_count tables by participantId
+
+10. Create -> Query Wizard - Simple Wuery Wizard -> choose what ever fields you want to include from each table. -> Next -> Next -> Finish
+
+11. You will see Participant Query tab now -> Right click on this tab, and go to Design View
+
+12. On Criteria row, add >40 in the age column, and add F in the gender column.
+
+13. Click on Run on the top left menu.
+
+14. You will get your preferred results.
+

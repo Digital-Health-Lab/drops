@@ -1,0 +1,7 @@
+participantId,sourceId,timestamp,duration,steps,xAxis,yAxis,zAxis,variableName,variableValue,addData,createdAt,updatedAt,deletedAt
+1,1,25/02/2017 08:00:00 AM,60,0,,,,,,{"Distance":"0";"Calories":"0.949";"Floors":"0";"Elevation":"0";"Heart Rate":"46"},28/11/2017 12:29:52 AM,28/11/2017 12:29:52 AM,
+1,1,25/02/2017 08:01:00 AM,60,0,,,,,,{"Distance":"0";"Calories":"0.949";"Floors":"0";"Elevation":"0";"Heart Rate":"46"},28/11/2017 12:29:52 AM,28/11/2017 12:29:52 AM,
+1,1,21/06/2017 12:00:00 AM,10,3116,,,,Cohort participant id,21,{"Calories Burned":"1983";"Distance":"2.08";"Floors":"0";"Minutes Sedentary":"1356";"Minutes Lightly Active":"84";"Minutes Fairly Active":"0";"Minutes Very Active":"0";"Activity Calories":"354"},29/11/2017 12:55:53 PM,29/11/2017 12:55:53 PM,
+1,1,22/06/2017 12:00:00 AM,10,1466,,,,Cohort participant id,21,{"Calories Burned":"1800";"Distance":"0.99";"Floors":"0";"Minutes Sedentary":"1385";"Minutes Lightly Active":"55";"Minutes Fairly Active":"0";"Minutes Very Active":"0";"Activity Calories":"199"},29/11/2017 12:55:53 PM,29/11/2017 12:55:53 PM,
+1,1,23/06/2017 12:00:00 AM,10,17,,,,Cohort participant id,21,{"Calories Burned":"1667";"Distance":"0.01";"Floors":"0";"Minutes Sedentary":"1439";"Minutes Lightly Active":"1";"Minutes Fairly Active":"0";"Minutes Very Active":"0";"Activity Calories":"3"},29/11/2017 12:55:54 PM,29/11/2017 12:55:54 PM,
+1,1,25/02/2017 08:02:00 AM,60,0,,,,,,{"Distance":"0";"Calories":"0.949";"Floors":"0";"Elevation":"0";"Heart Rate":"46"},28/11/2017 12:29:53 AM,28/11/2017 12:29:53 AM,

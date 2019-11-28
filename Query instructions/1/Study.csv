@@ -1,0 +1,2 @@
+studyId,userId,parentStudyId,title,description,catgeories,keywords,fileType,contributors,references,funding,licence,variableName,variableValue,addData,createdAt,updatedAt,deletedAt
+3,5,,My test 01,My test 01,step count,something,csv,Yang,something,not sure,Public,,,,27/11/2017 11:59:34 PM,27/11/2017 11:59:34 PM,
